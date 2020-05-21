@@ -1,0 +1,63 @@
+server:
+  servlet:
+    context-path: /v1/api
+spring:
+  aop:
+    auto: true
+    proxy-target-class: false
+  profiles:
+    active: local #指定加载环境
+  #时间+8小时
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+#  redis:
+#    timeout: 5000
+#    lettuce:
+#      pool:
+#        max-active: 7
+#        max-idle: 7
+#        min-idle: 2
+#        max-wait: 100ms
+  datasource:
+    #通用数据源配置
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # Hikari 数据源专用配置
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java #配置监视其他路径的更改
+      exclude: static/** #仅排除/static你将设置以下内容
+    #与LiveReload一起使用时，自动重启的效果非常好。
+    livereload:
+      enabled: true
+  # JPA 相关配置
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+
+  data:
+    mongodb:
+      uri: mongodb://172.31.236.129:27017,172.31.236.129:27018,172.31.236.129:27019/jbxie?slaveOk=true&replicaSet=rs0&readPreference=secondaryPreferred
+#用户配置信息
+user:
+  loginFailureLimit: 5 #登录失败次数限制
+  userSecret: "ifly_xylx1.t!@#_()!@"
+  #userInfoRedisExpire: 7200 #记住用户状态信息缓存时间 2*60*60
+  #rememberUserInfoRedisExpire: 259200 #记住用户状态信息缓存时间 3*24*60*60
+  userInfoRedisExpire: 7200 #记住用户状态信息缓存时间 2*60*60
+  verCodePrefix: "verCode_" #验证码前缀
+warn:
+  userOpenId:
+    - o4-uRjurMxdpTvS6163jm5SDSMck
+uri:
+  notNeedVerifyUri:
+    - /v1/api/login
+  logoutUri: "/v1/api/logout"
+
