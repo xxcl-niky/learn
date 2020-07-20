@@ -16,7 +16,11 @@ public class RandomTests {
     public static final String ALLCHAR = "abcdefghijklmnopqrstuvwxyz0123456789!@#";
 
     public static void main(String[]args) {
-        randomCodeTest();
+        System.out.println(Math.random());//返回[0,1)随机数
+        System.out.println((int)(Math.random()*6));//返回0-5；随机数
+        System.out.println((int)(Math.random()*6+1));//返回1-6，随机塞子
+        System.out.println((int)((Math.random()*9+1)*100000)); //返回1-9，数据数
+//        randomCodeTest();
     }
 
     public static void randomCodeTest() {

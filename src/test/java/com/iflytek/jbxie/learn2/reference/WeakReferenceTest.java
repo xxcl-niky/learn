@@ -2,16 +2,19 @@ package com.iflytek.jbxie.learn2.reference;
 
 import java.lang.ref.WeakReference;
 
+/**
+ * 弱引用
+ */
 public class WeakReferenceTest {
     public static void main(String[] args) {
         WeakReference m = new WeakReference(new M());
         System.out.print(m.get());
         System.gc();
-//        try {
-//            Thread.sleep(500);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
+        try {
+            Thread.sleep(500);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         System.out.print(m.get());
     }
 }

@@ -16,12 +16,12 @@ public class CustomMultiThreadingServiceImpl implements CustomMultiThreadingServ
     @Override
     @Async
     public void executeAsyncTask1(int i) {
-        log.info("CustomMultiThreadingServiceImpl ==> executeAsyncTask1 method: 执行异步任务{} ", i);
+//        log.info("CustomMultiThreadingServiceImpl ==> executeAsyncTask1 method: 执行异步任务{} ", i);
     }
 
     @Override
     @Async
     public void executeAsyncTask2(int i) {
-        log.info("CustomMultiThreadingServiceImpl ==> executeAsyncTask2 method: 执行异步任务{} ", i);
+//        log.info("CustomMultiThreadingServiceImpl ==> executeAsyncTask2 method: 执行异步任务{} ", i);
     }
 }

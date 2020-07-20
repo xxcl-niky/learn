@@ -17,8 +17,8 @@ public class SoftReferenceTest {
             e.printStackTrace();
         }
         System.out.print(m.get());
-        // 在堆里面申请 15M 字节数组空间 ，这是装不下，系统会垃圾回收，先回收一次，如果不够的话，会把软引用干掉
-        byte[] b = new byte[15*1024*1024];
+        // 在堆里面申请 11M 字节数组空间 ，这是装不下，系统会垃圾回收，先回收一次，如果不够的话，会把软引用干掉
+        byte[] b = new byte[11*1024*1024];
         System.out.print(m.get());
     }
 

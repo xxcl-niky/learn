@@ -11,6 +11,6 @@ public class NormalReferenceTest {
         // 进行垃圾回收
         System.gc();
         System.out.print(m);
-        Thread.sleep(1000000);
+        Thread.sleep(10* 1000);
     }
 }

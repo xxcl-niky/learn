@@ -1,5 +1,7 @@
 package com.iflytek.jbxie.learn2.bare;
 
+import java.time.LocalDateTime;
+
 /**
  * 编码测试
  *
@@ -9,8 +11,9 @@ package com.iflytek.jbxie.learn2.bare;
 
 public class CodeTests {
     public static void main(String[]args) {
+        System.out.println(LocalDateTime.now());
 //        charTest();
-        stringCharTest();
+//        stringCharTest();
     }
 
     public static void charTest() {
