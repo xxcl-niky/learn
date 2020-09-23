@@ -6,6 +6,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.*;
+import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 /**
  * 集合测试
@@ -18,6 +20,13 @@ import java.util.*;
 public class CollectionTest {
     @Test
     public void ListTest() {
+        String [] a1 = {"1", "2"};
+        int [] a2 = {1, 2};
+        int [] a3 = new int[]{1,2};
+        int [] a4 = new int[2];
+        a4[0] = 1;
+        a4[1] = 2;
+
         // List: ArrayList, LinkedList, Vector都是List接口的实现(List继承Collection接口)
         List arrayList = new ArrayList();
         String name1 = "zhangsan1";
@@ -50,7 +59,7 @@ public class CollectionTest {
 
     @Test
     public void collectionsTest() {
-        List arrayList = new ArrayList();
+        List<Integer> arrayList = new ArrayList();
         arrayList.add(2);
         arrayList.add(1);
         arrayList.add(3);
@@ -77,12 +86,12 @@ public class CollectionTest {
         });
         System.out.println(arrayList);
 
-        System.out.println(Collections.replaceAll(arrayList, "zhangsan1", "lisi"));
+        System.out.println(Collections.replaceAll(arrayList, 1, 11));
         System.out.println(arrayList);
     }
 
     @Test
-    public void ArraysTest() {
+    public void arraysTest() {
         String[] array = new String[10];
         array[0] = "lisi1";
         array[1] = "lisi2";

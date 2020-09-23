@@ -3,6 +3,7 @@ package com.iflytek.jbxie.learn2.reference;
 import java.lang.ref.PhantomReference;
 import java.lang.ref.Reference;
 import java.lang.ref.ReferenceQueue;
+import java.nio.ByteBuffer;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -46,4 +47,14 @@ public class PhantomReferenceTest {
         }
         ).start();
     }
+
+
+
+
+
+    public static void test() {
+        ByteBuffer b = ByteBuffer.allocate(1024);
+        ByteBuffer b1 = ByteBuffer.allocateDirect(1024);
+    }
+
 }

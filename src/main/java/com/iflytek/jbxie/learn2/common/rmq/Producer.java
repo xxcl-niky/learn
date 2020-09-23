@@ -20,7 +20,7 @@ public class Producer {
         producer.setVipChannelEnabled(false);
         //绑定name server
 //        producer.setNamesrvAddr("127.12.15.6:9876;127.12.15.6:9877");
-        producer.setNamesrvAddr( "127.0.0.1:9876");
+        producer.setNamesrvAddr( "172.31.236.129:9876");
         start();
     }
     /**

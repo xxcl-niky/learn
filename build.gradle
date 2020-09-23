@@ -39,6 +39,7 @@ dependencies {
 	implementation 'net.bramp.ffmpeg:ffmpeg:0.6.2'
 	implementation 'com.alibaba:fastjson:1.2.59'
 	implementation 'com.google.guava:guava:28.2-jre'
+
 	implementation 'com.netflix.eureka:eureka-client:1.9.18'
 	compile group: 'org.apache.rocketmq', name: 'rocketmq-client', version: '4.6.0'
 	compile group: 'org.bytedeco', name: 'javacv-platform', version: '1.5.2'

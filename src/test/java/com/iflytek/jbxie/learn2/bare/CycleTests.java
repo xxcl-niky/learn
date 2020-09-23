@@ -9,16 +9,16 @@ import java.util.Arrays;
 
 public class CycleTests {
     public static void main(String[] args) {
-        testFor();
-//        testForeach();
-        testForeach2();
+//        testFor();
+        testForeach();
+//        testForeach2();
     }
     public static void testFor() {
         for (int i = 1; i <= 5; i ++) {
             System.out.println("---for---num:" + i);
             if (i == 3) {
-                return;
-//                break;
+//                return;
+                break;
             }
             System.out.println("---for---num:" + i);
         }
@@ -31,6 +31,7 @@ public class CycleTests {
             System.out.println("---forEach---num:" + e);
             if (e == 3) {
                 return;
+//                break; // 报错
             }
             System.out.println("---forEach---num:" + e);
         });
@@ -42,7 +43,8 @@ public class CycleTests {
         for (Integer num : arr) {
             System.out.println("---forEach2---num:" + num);
             if (num == 3) {
-                return;
+//                return;
+                break;
             }
             System.out.println("---forEach2---num:" + num);
         }
