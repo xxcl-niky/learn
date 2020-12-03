@@ -26,7 +26,7 @@ public class ThreadLocalTests {
     });
 
     public static void main(String[] args) {
-        Thread [] threads = new Thread[5];
+/*        Thread [] threads = new Thread[5];
         for (int i=0; i<threads.length; i++) {
             threads[i] = new Thread(() -> {
 //                a += 5;
@@ -40,6 +40,42 @@ public class ThreadLocalTests {
                 (e) -> {
                     e.start();
                 }
-        );
+        );*/
+
+        joinTest();
+    }
+
+
+    private static void joinTest(){
+        try {
+            Thread t = new Thread(new Runnable()
+            {
+                public void run()
+                {
+                    System.out.println("First task started");
+                    System.out.println("Sleeping for 2 seconds");
+                    try
+                    {
+                        Thread.sleep(2000);
+                    } catch (InterruptedException e)
+                    {
+                        e.printStackTrace();
+                    }
+                    System.out.println("First task completed");
+                }
+            });
+            Thread t1 = new Thread(new Runnable()
+            {
+                public void run()
+                {
+                    System.out.println("Second task completed");
+                }
+            });
+            t.start(); // Line 15
+            t.join(); // Line 16
+            t1.start();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

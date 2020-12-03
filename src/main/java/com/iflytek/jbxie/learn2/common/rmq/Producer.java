@@ -21,7 +21,7 @@ public class Producer {
         //绑定name server
 //        producer.setNamesrvAddr("127.12.15.6:9876;127.12.15.6:9877");
         producer.setNamesrvAddr( "172.31.236.129:9876");
-        start();
+//        start();
     }
     /**
      * 对象在使用之前必须要调用一次，只能初始化一次

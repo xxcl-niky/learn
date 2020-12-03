@@ -1,19 +1,9 @@
 server:
   port: 8088
 spring:
-  data:
-    mongodb:
-      uri: mongodb://zhangsan:123456@172.31.236.129:27017,172.31.236.129:27018,172.31.236.129:27019/note?slaveOk=true
-  #  redis:
-#    database: 3
-#    host: 172.31.236.129
-#    port: 6679
-#    password: 1q2w3e,./
-  datasource:
-    #通用数据源配置
-    url: jdbc:mysql://172.16.59.106:10063/ifly_cpcc_ad_video?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=Asia/Shanghai&zeroDateTimeBehavior=CONVERT_TO_NULL
-    username: ai_video_dev
-    password: 123!@#abc_dev
+#  data:
+#    mongodb:
+#      uri: mongodb://zhangsan:123456@172.31.236.129:27017,172.31.236.129:27018,172.31.236.129:27019/note?slaveOk=true
 #logging:
 #  config: classpath:log4j2-spring-local.xml
 sps:

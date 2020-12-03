@@ -65,7 +65,7 @@ public class Consumer {
             return ConsumeOrderlyStatus.SUCCESS;
 //            return ConsumeConcurrentlyStatus.CONSUME_SUCCESS;
         });
-        consumer.start();
+//        consumer.start();
         System.out.println("消费者 启动成功=======");
     }
 }

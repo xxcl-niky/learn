@@ -11,9 +11,10 @@ import java.time.LocalDateTime;
 
 public class CodeTests {
     public static void main(String[]args) {
-        System.out.println(LocalDateTime.now());
+//        System.out.println(LocalDateTime.now());
 //        charTest();
 //        stringCharTest();
+        t();
     }
 
     public static void charTest() {
@@ -26,5 +27,21 @@ public class CodeTests {
         char c1 = 'a';
         System.out.println(str1);
         System.out.println(c1);
+    }
+
+    public static void t() {
+        int [] t1 = {1 ,2 ,3};
+        for (int temp : t1) {
+            switch (temp) {
+                case 1:
+                case 2:
+                    System.out.println("t");
+                case 3:
+                    System.out.println("tt");
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }
