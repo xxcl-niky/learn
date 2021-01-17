@@ -12,6 +12,9 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class Person {
+    static {
+        System.out.println("static is start");
+    }
     private String name;
     private String pwd;
     private Integer age;
