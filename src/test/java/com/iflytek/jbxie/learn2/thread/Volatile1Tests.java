@@ -12,7 +12,7 @@ public class Volatile1Tests {
         RunnableDemo td = new RunnableDemo();
         new Thread(td).start();
         while(true){
-            System.out.println("********");
+//            System.out.println("********");
             if(td.isFlag()){
                 System.out.println("########");
                 break;

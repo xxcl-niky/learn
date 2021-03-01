@@ -39,6 +39,8 @@ dependencies {
 	implementation 'net.bramp.ffmpeg:ffmpeg:0.6.2'
 	implementation 'com.alibaba:fastjson:1.2.59'
 	implementation 'com.google.guava:guava:28.2-jre'
+	implementation 'javax.mail:javax.mail-api:1.5.5'
+	implementation 'com.sun.mail:javax.mail:1.5.5'
 
 	implementation 'com.netflix.eureka:eureka-client:1.9.18'
 	compile group: 'org.apache.rocketmq', name: 'rocketmq-client', version: '4.6.0'
